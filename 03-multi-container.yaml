@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: Multi-containers
-  label:
+  labels:
     project: roboshop
     purpose: multi-container-practise
 spec:
@@ -11,4 +11,3 @@ spec:
     image: nginx
   - name: almalinux
     image: almalinux:9
-    
