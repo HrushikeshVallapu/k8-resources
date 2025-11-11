@@ -7,7 +7,7 @@ metadata:
     project: roboshop
     purpose: replicaset-demo
 spec:
-  replicas: 10
+  replicas: 2
   #these are the labels replicaset use to create pod replicas, this should match pod labels
   selector:
     matchLabels:
