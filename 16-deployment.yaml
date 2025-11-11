@@ -1,24 +1,24 @@
 apiVersion: apps/v1
-kind: ReplicaSet
+kind: Deployment
 metadata:
-  name: nginx
-  #replica set labels
+  name: nginx-deployment
+  #deployment labels
   labels:
     project: roboshop
-    purpose: replicaset-demo
+    purpose: deployment-demo
 spec:
   replicas: 2
   #these are the labels replica set use to create pod replicas, this should match pod labels
   selector:
     matchLabels:
       project: roboshop
-      purpose: replicaset-demo
+      purpose: deployment-demo
   #this is pod definition
   template:
     metadata:
       labels:
         project: roboshop
-        purpose: replicaset-demo
+        purpose: deployment-demo
     spec:
       containers:
       - name: nginx
